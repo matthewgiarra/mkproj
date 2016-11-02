@@ -12,25 +12,25 @@
 # then prompt the user for the name of the new project.
 if [ "$#" -ne 1 ]; then
 	# Read project name from command line input.
-	read -p "Enter a new project name: " PROJ_NAME
+	read -p "Enter the desired path to the new project directory: " PROJECT_PARENT_DIR
 	
 	# Check if no response was entered
 	# and exit if that's the case
-	if [ -z $PROJ_NAME ]; then
-		echo "No project name entered. Exiting."
+	if [ -z $PROJECT_PARENT_DIR ]; then
+		echo "No project path entered. Exiting."
 		exit 1
 	fi
 	
 else
 	# Assign the project name as the first input argument
-	PROJ_NAME=$1
+	PROJECT_PARENT_DIR=$1
 fi
 
 # This is the base directory containing all the project folders
-BASE_DIR=/home/shannon/a/aether/Projects
+#BASE_DIR=/home/shannon/b/aether/Projects
 
 # This is the parent directory of the new project that will be created.
-PROJECT_PARENT_DIR=${BASE_DIR%%/}/${PROJ_NAME%%/}
+#PROJECT_PARENT_DIR=${BASE_DIR%%/}/${PROJ_NAME%%/}
 
 # If the project folder exists, then inform the user and exit.
 if [ -d $PROJECT_PARENT_DIR ]; then
@@ -64,6 +64,11 @@ then
 	# Manuscript directory
 	mkdir -p ${PROJECT_PARENT_DIR%%/}/manuscripts
 	
+	# Modify the permissions of the new
+	# directory to give write and execute/search
+	# permissions to the group
+	chmod -R g+wx $PROJECT_PARENT_DIR
+
 else
 	# Inform the user that nothing is happening.
     echo Aborting. No action taken.
