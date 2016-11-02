@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # This script creates a new project directory structure
-# on the Purdue Aether server called Shannon,
-# at the directory location /home/shannon/a/aether/Projects
 #
 # Matthew Giarra
 # matthew.giarra@gmail.com
@@ -25,12 +23,6 @@ else
 	# Assign the project name as the first input argument
 	PROJECT_PARENT_DIR=$1
 fi
-
-# This is the base directory containing all the project folders
-#BASE_DIR=/home/shannon/b/aether/Projects
-
-# This is the parent directory of the new project that will be created.
-#PROJECT_PARENT_DIR=${BASE_DIR%%/}/${PROJ_NAME%%/}
 
 # If the project folder exists, then inform the user and exit.
 if [ -d $PROJECT_PARENT_DIR ]; then
