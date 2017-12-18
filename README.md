@@ -21,7 +21,7 @@ Doing this will allow you to call and run `mkproj` from anywhere on any of the A
 
 ## Caveats
 
-* If you have used this code before, it used to automatically create directories within `/home/shannon/a/aether/Projects`. Since our server is now split between /a/ and /b/ filesystems, I've changed the script to create the project on whatever path you enter when invoking it. So to create a project in at `/home/shannon/a/aether/Projects/<new_project_directory>`, you need to enter:
+* If you have used this code before, it used to automatically create directories within `/home/shannon/a/aether/Projects`. Since our server is now split between /a/ and /b/ filesystems, I've changed the script to create the project on whatever absolute path you enter when invoking it. So to create a project in at `/home/shannon/a/aether/Projects/<new_project_directory>`, enter:
 
 `mkproj /home/shannon/a/aether/Projects/<new_project_directory>`
 
