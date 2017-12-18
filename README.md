@@ -13,7 +13,7 @@ or
 
 If you run `mkproj` with no arguments, you'll be prompted to enter the path to your new project directory. You'll be prompted with a confirmation, and entering yes ('y' or 'yes') will create a new directory structure whose top-level directory is located at the path you typed.
 
-How to "install" mkproj for your user account
+How to install `mkproj` for your user account
 
 To make this script work from anywhere on any system, login to shannon and copy-paste this into the terminal:
 
